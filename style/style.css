@@ -1,0 +1,136 @@
+
+/* Color Palette */
+
+:root {
+
+
+    /* Primary */
+
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    
+    /* Neutral */
+
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+
+
+html {
+
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+
+
+
+
+
+.grid-container {
+
+    padding: 20px;
+    display: grid;
+    justify-content: space-between;
+
+
+    grid-gap: 15px;
+    grid-template-areas: 
+    
+        'daniel daniel jonathan kira'
+        'jeanette patrick patrick kira';
+
+}
+
+
+
+.daniel {
+    grid-area: daniel;
+   
+   }
+.jonathan {
+    grid-area: jonathan;
+   }
+.kira {
+    grid-area: kira;
+   }
+.jeanette {
+    grid-area: jeanette;
+    
+   }
+.patrick { 
+   grid-area: patrick;
+
+   }
+
+
+.testemonial_container {
+
+    border: 2px solid black;
+    padding: 1.5rem;
+    
+
+}
+
+.testemonial_name {
+
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.testemonial_name_container > p {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    display: block;
+
+}
+
+.testemonial_name_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

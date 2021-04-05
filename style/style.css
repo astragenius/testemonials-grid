@@ -1,22 +1,22 @@
 
-/* Color Palette */
+/* ------ Color Palette    ---- */
 
 :root {
 
 
     /* Primary */
 
-    --moderate-violet: hsl(263, 55%, 52%);
-    --very-dark-grayish-blue: hsl(217, 19%, 35%);
-    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --moderate-violet: #7541c8;
+    --very-dark-grayish-blue: #48556a;
+    --very-dark-blackish-blue: #19212e;
     
     /* Neutral */
 
-    --light-gray: hsl(0, 0%, 81%);
-    --light-grayish-blue: hsl(210, 46%, 95%);
+    --light-gray: #cfcfcf;
+    --light-grayish-blue: #ecf2f8;
 }
 
-
+/* ----------------------------------- */
 
 
 
@@ -35,19 +35,34 @@ html {
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
+body {
+    background-color: var(--light-grayish-blue);
+   
+}
 
 
+
+
+/* -------CSS - GRID - SYSTEM SETUP -------- */
+
+.testemonial_main {
+
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
 
 
 
 .grid-container {
 
-    padding: 20px;
+    width: 60vw;
+    padding: 2rem;
     display: grid;
-    justify-content: space-between;
-
-
-    grid-gap: 15px;
+    grid-gap: 3rem;
     grid-template-areas: 
     
         'daniel daniel jonathan kira'
@@ -59,59 +74,271 @@ html {
 
 .daniel {
     grid-area: daniel;
+    background-color: var(--moderate-violet);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-size: 140px auto;
+    background-position: 85% 0%;
    
    }
 .jonathan {
     grid-area: jonathan;
+    background-color: var(--very-dark-grayish-blue);
    }
 .kira {
     grid-area: kira;
+    background-color: #ffff;
    }
 .jeanette {
     grid-area: jeanette;
+    background-color: #ffff;
     
    }
 .patrick { 
    grid-area: patrick;
+   background-color: var(--very-dark-blackish-blue);
 
    }
 
 
+/* ------------------------------------------------- */
+
+
+
+/* --- Individual Font and color Testemonial boxes */
+
+
+.p_content_grey {
+
+    color: var(--very-dark-grayish-blue);
+}
+
+
+.p_name_1 {
+
+    color: white;
+}
+
+.p_verified {
+
+    color: var(--light-gray);
+    opacity: 0.7;
+    font-size: 1rem;
+}
+
+.testemonial_content_p {
+
+    color: white;
+}
+
+.testemonial_content > p {
+
+    opacity: 0.5;
+}
+
+
+
+/* ---------------------------------- */
+
+
+
+
 .testemonial_container {
 
-    border: 2px solid black;
-    padding: 1.5rem;
+    padding: 3.2rem;
+    border-radius: 1.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     
-
 }
 
 .testemonial_name {
 
-    width: 20%;
+    width: 60%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
+    align-items: center;
     
+}
+
+.testemonial_name > img {
+
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    border: .3rem solid var(--moderate-violet);
+}
+
+.testemonial_name_container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2.5rem;
+    
+
 }
 
 .testemonial_name_container > p {
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: space-around;
-    display: block;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    
+}
+
+
+.testemonial_content > p {
+
+    font-size: 1.7rem;
+    line-height: 1.8;
+}
+
+.testemonial_content_heading {
+
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    padding-bottom: 3rem;
+    padding-top: 2.5rem;
 
 }
 
-.testemonial_name_
 
 
+/* ----------MObile - VERSION ------------ */
 
 
+/* ---- 1336 px ----- */
+
+@media (max-width: 1366px) {
+
+    .testemonial_main {
+
+        height: 90%;
+    }
+
+    .grid-container {
+
+        grid-gap: 1rem;
+        width: 90%;
+        grid-template-areas: 
+        
+                "daniel jonathan"
+                "jeanette patrick"
+                "kira kira";
+    }
+
+    .testemonial_container {
+
+        margin: 1rem;
+    }
+}
+
+/* ---- 1024 px ----- */
 
 
+@media (max-width: 1024px) {
+
+    .testemonial_content {
+
+        padding: 2rem;
+    }
+
+    
+    .testemonial_container {
+
+        margin: 1rem;
+    }
+
+    .testemonial_main {
+
+        height: 100%;
+    }
+
+    .grid-container {
 
 
+        width: 100%;
+        grid-template-areas: 
+        
+                "daniel jonathan"
+                "jeanette patrick"
+                "kira kira";
+    }
+}
+
+
+/* ---- 768 px ----- */
+
+@media (max-width: 768px) {
+
+   
+    
+    .testemonial_main {
+
+        height: 100%;
+    }
+
+    .grid-container {
+       
+        width: 80%;
+        grid-template-areas:
+
+            "daniel"
+            "jonathan"
+            "jeanette"
+            "patrick"
+            "kira"   
+    }
+
+}
+
+
+/* ---- 414 px ----- */
+
+@media (max-width: 414px) {
+
+
+    .testemonial_main {
+
+        height: 100%;
+    }
+
+    .grid-container {
+       
+        width: 100%;
+        grid-template-areas:
+
+            "daniel"
+            "jonathan"
+            "jeanette"
+            "patrick"
+            "kira"
+        
+    }
+}
+
+/* ---- 375 px ----- */
+
+@media (max-width: 375px) {
+
+    .testemonial_content {
+
+        margin: 0;
+    }
+
+    .testemonial_container {
+
+        padding: 2rem;
+    }
+
+
+    .testemonial_name {
+
+        width: 70%;
+    }
+
+
+}
 
 
 
